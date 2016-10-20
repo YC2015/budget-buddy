@@ -3,9 +3,10 @@ $(document).ready(function(){
   $('#home').show();
 });
 
-$('.main-nav').find($ 'li').on('click', function(){
+$('.main-nav').on('click','li', function(){
   var $reveal = $(this).data('tab');
+  $('.post-it').hide();
   $('.not-index-main').fadeOut();
   $('#' + $reveal).fadeIn();
-  console.log(event.target);
+  // console.log(event.target);
 });
